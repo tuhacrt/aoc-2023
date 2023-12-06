@@ -1,0 +1,40 @@
+{
+  "name": "typescript-starter",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A Typescript-starter from Tuhacrt",
+  "author": "Tuhacrt <a067800497@gmail.com>",
+  "license": "MIT",
+  "keywords": [],
+  "sideEffects": false,
+  "module": "./index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:dev": "bun build --target=bun ./src/index.ts --outdir=dist --outfile=index.js",
+    "dev": "bun run --hot ./src/index.ts",
+    "lint": "eslint .",
+    "prepare": "simple-git-hooks",
+    "start": "bun run ./src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.3.4",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "bun-types": "^1.0.15",
+    "eslint": "^8.55.0",
+    "eslint-define-config": "^2.0.0",
+    "lint-staged": "^15.2.0",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.3.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bunx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
