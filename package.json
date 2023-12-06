@@ -13,16 +13,20 @@
   ],
   "scripts": {
     "build:dev": "bun build --target=bun ./src/index.ts --outdir=dist --outfile=index.js",
-    "dev": "bun run --hot ./src/index.ts",
+    "dev": "bun run --hot",
+    "test": "bun test",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
-    "start": "bun run ./src/index.ts",
-    "test": "bun test",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fp-ts": "latest",
+    "ramda": "^0.29.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.3.4",
     "@total-typescript/ts-reset": "^0.5.1",
+    "@types/ramda": "^0.29.9",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "bun-types": "^1.0.15",
     "eslint": "^8.55.0",

@@ -5,6 +5,7 @@ export default antfu(
   {
     rules: {
       'antfu/if-newline': 'off',
+      'antfu/top-level-function': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'style/curly': 'off',
       'style/semi': ['error', 'always'],
@@ -21,6 +22,7 @@ export default antfu(
       'ts/array-type': ['error', { default: 'generic' }],
       'ts/consistent-type-imports': 'error',
       'ts/consistent-type-definitions': ['error', 'type'],
+      'no-console': 'off',
     },
   },
 );
